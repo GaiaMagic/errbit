@@ -1,0 +1,19 @@
+app:
+  build: .
+  links:
+    - mongo
+  environment:
+    MONGO_URL: 'mongodb://mongo/errbit_production'
+  ports:
+    - '44444:3000'
+  restart: always
+  mem_limit: 500M
+  memswap_limit: -1
+
+mongo:
+  image: mongo:3.2.1
+  restart: always
+  mem_limit: 500M
+  memswap_limit: -1
+  volumes:
+    - '/data/mongo/errbit:/data/db'
