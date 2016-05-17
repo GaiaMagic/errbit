@@ -36,7 +36,7 @@ a:hover   { color: #0069cc; text-decoration: underline; }
 a.action  { float: right; font-size: 0.9em;}
 
 #header > div, #content-wrapper, #footer {
-  width: 930px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -138,6 +138,7 @@ a.action  { float: right; font-size: 0.9em;}
   margin-right: 5px;
 }
 #nav-bar li a {
+  display: block;
   color: #666;
   padding: 0 20px;
   font-size: 14px;
@@ -214,6 +215,7 @@ a.action  { float: right; font-size: 0.9em;}
   border: 1px solid #bbb;
 }
 #action-bar span a {
+  display: block;
   color: #666;
   padding: 0 20px;
   font-size: 14px; font-weight: bold; line-height: 39px; text-decoration: none;
@@ -442,6 +444,12 @@ table thead + tbody tr:first-child td {
 table th { background-color: #ececec; font-weight: bold; text-transform: uppercase; white-space: nowrap; }
 table tbody tr:nth-child(odd) td { background-color: #F9F9F9; }
 table .main { width: 100%; }
+table .code {
+  width: 100%;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: Menlo, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, monospace;
+}
 
 table.single_user {
   border-top: none;
