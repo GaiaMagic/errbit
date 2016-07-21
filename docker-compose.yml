@@ -5,7 +5,7 @@ app:
   environment:
     MONGO_URL: 'mongodb://mongo/errbit_production'
   ports:
-    - '44444:3000'
+    - '127.0.0.1:44444:3000'
   restart: always
   mem_limit: 500M
   memswap_limit: -1
