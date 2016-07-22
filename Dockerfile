@@ -2,6 +2,8 @@ FROM ruby:2.3.0
 
 WORKDIR /errbit
 
+RUN echo Asia/Hong_Kong > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
+
 RUN (echo "deb http://mirrors.aliyun.com/debian jessie main" && \
     echo "deb http://mirrors.aliyun.com/debian jessie-updates main" && \
     echo "deb http://mirrors.aliyun.com/debian-security/ jessie/updates main") \

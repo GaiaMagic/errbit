@@ -4,11 +4,15 @@ app:
     - mongo
   environment:
     MONGO_URL: 'mongodb://mongo/errbit_production'
+    ERRBIT_PROTOCOL: 'https'
+    ERRBIT_HOST: 'airbrake.youyanchu.com'
   ports:
     - '127.0.0.1:44444:3000'
   restart: always
   mem_limit: 500M
   memswap_limit: -1
+  volumes:
+    - './wechat-notify:/usr/local/bin/wechat-notify'
 
 mongo:
   image: mongo:3.2.1

@@ -2,11 +2,12 @@
 
 Replacement for Airbrake.
 
-You may need to install `docker`, `docker-compose` and these images:
+You may need to install `docker`, `docker-compose` and these images and [wechat-notify](https://github.com/caiguanhao/wechat-notify):
 
 ```
 oss get /downloads/images/ruby-2.3.0.tar.gz | docker load
 oss get /downloads/images/mongo-3.2.1.tar.gz | docker load
+oss get /downloads/server/wechat-notify/linux/wechat-notify .
 ```
 
 To build and run:
